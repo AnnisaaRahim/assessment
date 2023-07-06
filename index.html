@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, 'script', 'dataLayer', 'GTM-KDFC8Z4')
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <title>My Test Page</title>
+  </head>
+  <body>
+    <h1>Welcome to My Test Page</h1>
+
+    <!-- Display the key1 and key2 values here -->
+    <div id="keyValues"></div>
+
+    <script type="text/javascript">
+      // JavaScript code to extract and display the key1 and key2 values from the URL
+      var urlParams = new URLSearchParams(window.location.search)
+      var key1 = urlParams.get('key1')
+      var key2 = urlParams.get('key2')
+
+      // Update the keyValues element with the values from the URL
+      document.getElementById('keyValues').innerHTML = 'key1: ' + key1 + '<br>' + 'key2: ' + key2
+
+      ;(function (a, b, c, d, e, f, g) {
+        e['ire_o'] = c
+        e[c] =
+          e[c] ||
+          function () {
+            ;(e[c].a = e[c].a || []).push(arguments)
+          }
+        f = d.createElement(b)
+        g = d.getElementsByTagName(b)[0]
+        f.async = 1
+        f.src = a
+        g.parentNode.insertBefore(f, g)
+      })(
+        'https://utt.impactcdn.com/A2788006-de3d-4011-a57c-c4737e79de0365535.js',
+        'script',
+        'ire',
+        document,
+        window
+      )
+      ire('identify', { customerid: key1, customeremail: key2 })
+    </script>
+  </body>
+</html>
